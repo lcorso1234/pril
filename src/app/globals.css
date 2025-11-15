@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --gunmetal: #181c20;
+  --gunmetal-light: #24292f;
+  --accent: #39ff14;
+  --noise: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PGZpbHRlciBpZD0ibiI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuOCIgbnVtT2N0YXZlcz0iMiIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWx0ZXI9InVybCgjbikiIG9wYWNpdHk9IjAuMjUiLz48L3N2Zz4=");
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--gunmetal);
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255, 106, 0, 0.08), transparent 45%),
+    radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.05), transparent 40%),
+    var(--noise);
+  background-attachment: fixed;
+  background-blend-mode: screen;
+}
+
+@layer base {
+  html {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", sans-serif;
+  }
+}
+
+@layer utilities {
+  @keyframes jiggle {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) rotate(-1deg);
+    }
+    50% {
+      transform: translate3d(1px, -1px, 0) rotate(1deg);
+    }
+  }
+
+  .animate-jiggle {
+    animation: jiggle 1.4s ease-in-out infinite;
+  }
+}
