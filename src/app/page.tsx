@@ -34,15 +34,8 @@ export default function HomePage() {
               </div>
               <div className="flex flex-col gap-1 rounded-2xl border border-white/5 bg-black/5 px-4 py-3">
                 <dt className="text-[10px] uppercase tracking-[0.3em] text-white/40">Website</dt>
-                <dd>
-                  <a
-                    href={contact.website}
-                    className="font-semibold text-[var(--accent)] underline-offset-2 hover:underline"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    kingsberrywafflehouse.com
-                  </a>
+                <dd className="font-semibold text-[var(--accent)]">
+                  kingsberrywafflehouse.com
                 </dd>
               </div>
               <div className="rounded-2xl border border-white/5 bg-black/5 px-4 py-3">
@@ -76,6 +69,9 @@ export default function HomePage() {
 
             <p className="mt-6 text-center text-xs text-white/60">
               Powered by {contact.poweredBy}
+            </p>
+            <p className="mt-2 text-center text-[11px] uppercase tracking-[0.3em] text-white/40">
+              Built in America. On Earth.
             </p>
           </article>
         </div>
